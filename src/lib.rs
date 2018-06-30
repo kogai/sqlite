@@ -1,3 +1,5 @@
+extern crate libsqlite3_sys;
+
 #[cfg(test)]
 mod tests {
     #[test]
