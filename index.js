@@ -1,7 +1,7 @@
 // import { Universe } from "./wasm_game_of_life";
-import foo from "./sqlite";
+// import foo from "./sqlite";
 
-console.log(foo);
+// console.log(foo);
 
 // const CELL_SIZE = 5;
 // const GRID_COLOR = "#CCCCCC";
