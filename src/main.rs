@@ -1,3 +1,9 @@
+extern crate rusqlite;
+
+fn main() {
+    println!("Hello world, {}", 0);
+}
+    
 #[cfg(test)]
 mod tests {
     #[test]
