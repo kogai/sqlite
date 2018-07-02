@@ -1,1 +1,6 @@
 sqlite
+
+## Implicit dependencies
+
+* fossil
+
