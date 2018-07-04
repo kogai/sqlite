@@ -1,8 +1,8 @@
 extern crate rusqlite;
 
 fn main() {
-    // println!("Hello with SQLite version {}", rusqlite::version());
-    println!("Hello with SQLite version {}", 1);
+    println!("Hello with SQLite version {}", rusqlite::version());
+    // println!("Hello with SQLite version {}", 1);
 }
 
 // #[no_mangle]
