@@ -3,6 +3,7 @@ FOSSIL := sqlite.fossil
 
 SRC := $(shell find ./src -type f -name '*.rs')
 SRC_SQLITE := $(shell find ./sqlite -type f -name '*')
+# TARGET := wasm32-unknown-unknown
 TARGET := wasm32-unknown-emscripten
 PWD := $(shell pwd)
 GIT_HASH := $(shell git log  --pretty=format:"%H" | head -n1)

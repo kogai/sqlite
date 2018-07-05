@@ -2,7 +2,7 @@
 name = "sqlite"
 version = "0.1.0"
 authors = ["Shinichi Kogai <kogai0121@gmail.com>"]
-# build = "build.rs"
+build = "build.rs"
 
 # [dependencies]
 # rusqlite = "*"
