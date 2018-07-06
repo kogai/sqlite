@@ -16,7 +16,7 @@ all: $(NAME).wasm
 .PHONY: $(NAME).wasm
 $(NAME).wasm: $(SRC)
 	source ~/emsdk/emsdk_env.sh && \
-	cargo build --target $(TARGET)
+	cargo build --target $(TARGET) --verbose
 	cp target/$(TARGET)/debug/$(NAME).wasm ./$(NAME).wasm
 
 build/sqlite3.c: $(SRC_SQLITE)

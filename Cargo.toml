@@ -2,6 +2,7 @@
 name = "sqlite"
 version = "0.1.0"
 authors = ["Shinichi Kogai <kogai0121@gmail.com>"]
+# links = "sqlite3"
 build = "build.rs"
 
 # [dependencies]
