@@ -5,13 +5,14 @@ extern "C" {
 /// Returns the SQLite version as an integer; e.g., `3016002` for version 3.16.2.
 ///
 /// See [`sqlite3_libversion_number()`](https://www.sqlite.org/c3ref/libversion.html).
+#[no_mangle]
 pub fn version_number() -> i32 {
     unsafe { sqlite3_libversion_number() }
 }
 
-fn main() {
-    println!("Hello with SQLite version {}", version_number());
-}
+// fn main() {
+//     println!("Hello with SQLite version {}", version_number());
+// }
 
 #[cfg(test)]
 mod tests {

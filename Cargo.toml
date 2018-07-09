@@ -2,8 +2,11 @@
 name = "sqlite"
 version = "0.1.0"
 authors = ["Shinichi Kogai <kogai0121@gmail.com>"]
-# links = "sqlite3"
+links = "sqlite3"
 build = "build.rs"
+
+# [lib]
+# crate-type = ["cdylib"]
 
 # [dependencies]
 # rusqlite = "*"
