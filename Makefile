@@ -38,8 +38,11 @@ libsqlite3-sys/sqlite3/sqlite3.dl: build/sqlite3.c
 
 .PHONY: tmp
 tmp:
-	rustc --emit=llvm-bc --target=$(TARGET) src/main.rs
+	rustc --crate-type=staticlib --emit=llvm-bc --target=asmjs-unknown-emscripten src/main.rs
+	# rustc --emit=llvm-bc src/main.rs
+	# rustc --emit=llvm-bc --target=$(TARGET) src/main.rs
 	# $(EMCC) -s BINARYEN=1 -s ERROR_ON_UNDEFINED_SYMBOLS=1 main.bc # -o $(NAME).wasm
+	$(EMCC) -s BINARYEN=1 main.bc # -o $(NAME).wasm
 	# rustc --crate-type=lib --target wasm32-unknown-unknown --emit llvm-bc src/lib.rs -o foo.bc
 	# # rustc --crate-type=lib --target wasm32-unknown-unknown --emit llvm-bc src/lib.rs -o foo.bc
 	# # rustc --crate-type=lib --emit llvm-bc src/lib.rs -o foo.bc
