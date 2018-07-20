@@ -1,5 +1,8 @@
 // import { Universe } from "./wasm_game_of_life";
-import { version } from "./sqlite.wasm";
+// import { version } from "./sqlite.wasm";
+import {
+  version
+} from "./a.out.wasm";
 
 console.log(version());
 

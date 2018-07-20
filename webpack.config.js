@@ -1,16 +1,22 @@
 const path = require("path");
 
 module.exports = {
-  loaders: [
-    {
-      test: /\.wasm$/,
-      loaders: ['wasm-loader']
-    }
-  ],
-  entry: "./bootstrap.js",
+  module: {
+    rules: [{
+      // test: /\.wasm$/,
+      test: /^a.+\.wasm$/,
+      use: [{
+        loader: "wasm-loader",
+      }],
+    }],
+    // loaders: [{
+    // }],
+  },
+  // entry: "./bootstrap.js",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bootstrap.js",
+    filename: "bundle.js",
   },
   mode: "development"
 };
