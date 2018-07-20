@@ -1,10 +1,23 @@
+console.log("hello");
 // import { Universe } from "./wasm_game_of_life";
 // import { version } from "./sqlite.wasm";
-import {
-  version
-} from "./a.out.wasm";
+// import {
+//   version
+// } from "./a.out.wasm";
+fetch("./a.out.wasm").then(function (response) {
+  return response.arrayBuffer();
+}).then(function (bytes) {
+  console.log(bytes);
+  return WebAssembly.compile(bytes);
+}).then(function (module) {
+  console.log(module);
+  return WebAssembly.instantiate(module);
+}).then(function (instance) {
+  console.log(instance);
+  console.log(instance.exports.add(7, 4));
+});
 
-console.log(version());
+// console.log(version());
 
 // const CELL_SIZE = 5;
 // const GRID_COLOR = "#CCCCCC";

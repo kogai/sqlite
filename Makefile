@@ -38,6 +38,7 @@ libsqlite3-sys/sqlite3/sqlite3.dl: build/sqlite3.c
 
 .PHONY: tmp
 tmp:
+	# rustc --crate-type=bin --emit=llvm-bc --target=asmjs-unknown-emscripten src/main.rs
 	rustc --crate-type=staticlib --emit=llvm-bc --target=asmjs-unknown-emscripten src/main.rs
 	# rustc --emit=llvm-bc src/main.rs
 	# rustc --emit=llvm-bc --target=$(TARGET) src/main.rs

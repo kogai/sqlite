@@ -1,17 +1,17 @@
 const path = require("path");
 
 module.exports = {
-  module: {
-    rules: [{
-      // test: /\.wasm$/,
-      test: /^a.+\.wasm$/,
-      use: [{
-        loader: "wasm-loader",
-      }],
-    }],
-    // loaders: [{
-    // }],
-  },
+  // module: {
+  //   rules: [{
+  //     // test: /\.wasm$/,
+  //     test: /^a.+\.wasm$/,
+  //     use: [{
+  //       loader: "wasm-loader",
+  //     }],
+  //   }],
+  //   // loaders: [{
+  //   // }],
+  // },
   // entry: "./bootstrap.js",
   entry: "./index.js",
   output: {
